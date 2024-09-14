@@ -14,6 +14,23 @@ body {
     overflow-x: hidden;         /* Prevent horizontal scroll */
 }
 
+/* LOGO SETTINGS */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+.logo {
+    max-width: 150px;
+    transition: transform 0.5s ease, translate 0.7s ease;
+}
+
+.logo:hover {
+    transform: rotate(360deg) translateX(50px) translateY(30px);  /* Random movement on hover */
+}
+
 /* HEADER SETTINGS */
 header {
     background-color: #2d3436;   /* Dark grey background */
