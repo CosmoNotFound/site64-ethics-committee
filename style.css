@@ -8,21 +8,21 @@
 /* Font Import */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0b3d0b;
-    color: #f0f0f0;
+    background-color: #0b3d0b; /* Dark Green Background */
+    color: #f0f0f0; /* White Text */
 }
 
 /* Header Styling */
 header {
-    background-color: #000;
+    background-color: #000; /* Black Header */
     padding: 20px;
     text-align: center;
-    border-bottom: 5px solid #2e8b57;
+    border-bottom: 5px solid #2e8b57; /* Dark Green Border */
 }
 
 header h1 {
     margin: 10px 0;
-    color: #f0f0f0;
+    color: #f0f0f0; /* White Text */
     font-weight: 600;
     font-size: 2.5em;
     letter-spacing: 2px;
@@ -32,7 +32,7 @@ header h1 {
 .logo {
     display: block;
     margin: 0 auto 15px;
-    width: 150px;
+    width: 150px; /* Adjusted Logo Size */
     animation: fadeInDown 1s ease-in-out;
 }
 
@@ -40,7 +40,7 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
-    background-color: #2e8b57;
+    background-color: #2e8b57; /* Dark Green Navigation */
     margin-bottom: 20px;
 }
 
@@ -50,22 +50,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #ffffff; /* White Text */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #000;
+    color: #000; /* Black on Hover */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(to right, #2e8b57, #0b3d0b);
-    color: #ffffff;
+    background: linear-gradient(to right, #2e8b57, #0b3d0b); /* Dark Green Gradient */
+    color: #ffffff; /* White Text */
     animation: fadeInUp 1s ease-in-out;
 }
 
@@ -83,15 +83,15 @@ nav ul li a:hover {
 
 /* Footer Styling */
 footer {
-    background-color: #000;
+    background-color: #000; /* Black Footer */
     text-align: center;
     padding: 15px;
-    border-top: 5px solid #2e8b57;
+    border-top: 5px solid #2e8b57; /* Dark Green Border */
 }
 
 footer p {
     margin: 0;
-    color: #f0f0f0;
+    color: #f0f0f0; /* White Text */
     font-weight: 400;
 }
 
