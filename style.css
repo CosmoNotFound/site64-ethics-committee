@@ -8,8 +8,8 @@
 /* BODY SETTINGS */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0b3d0b;  /* Dark green background */
-    color: #f0f0f0;             /* White text */
+    background-color: #f2f2f2;  /* Light grey background */
+    color: #333;                /* Dark grey text */
     line-height: 1.6;
 }
 
@@ -21,21 +21,21 @@ body {
     padding-top: 20px;
 }
 .logo {
-    max-width: 200px;
+    max-width: 150px;
 }
 
 /* HEADER SETTINGS */
 header {
-    background-color: #000;     /* Black background */
+    background-color: #4b4b4b;     /* Dark grey background */
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #2e8b57;  /* Dark green border */
+    border-bottom: 3px solid #737373;  /* Grey border */
 }
 
 header h1 {
-    color: #f0f0f0;             /* White text */
-    font-size: 2.5em;
-    margin: 20px 0;
+    color: #ffffff;             /* White text */
+    font-size: 2em;
+    margin: 10px 0;
     text-transform: uppercase;
 }
 
@@ -58,36 +58,36 @@ header h1 {
 }
 
 .nav-menu li a:hover {
-    color: #2e8b57;             /* Dark green hover effect */
+    color: #00bcd4;             /* Light blue hover effect */
 }
 
 /* HERO SECTION */
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #0b3d0b, #2e8b57);  /* Green gradient background */
+    background-color: #737373;   /* Medium grey background */
     color: #ffffff;  /* White text */
     animation: fadeInUp 1.5s ease-in-out;
 }
 
 .hero h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+    font-size: 2em;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
 .hero p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 30px;
     font-weight: 300;
 }
 
 /* FOOTER */
 footer {
-    background-color: #000;      /* Black background */
+    background-color: #4b4b4b;   /* Dark grey background */
     text-align: center;
     padding: 20px;
-    border-top: 5px solid #2e8b57;  /* Dark green border */
+    border-top: 3px solid #737373;  /* Grey border */
 }
 
 footer p {
@@ -111,10 +111,10 @@ footer p {
 /* MEDIA QUERIES (MOBILE FRIENDLY) */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     .hero h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .nav-menu li {
         display: block;
