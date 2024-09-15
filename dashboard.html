@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Containment Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <img src="Site-64-Ethics-Committee-Logo.png" alt="Site-64 Ethics Committee Logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="future-projects.html">Future Projects</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li><a href="current-manpower.html">Current Manpower</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="containment-dashboard">
+    <h2>SCP Containment Dashboard</h2>
+    <div class="scp-status" id="scp-173">SCP-173: <span class="status">Contained</span></div>
+    <div class="scp-status" id="scp-682">SCP-682: <span class="status">Breach</span></div>
+    <div class="scp-status" id="scp-096">SCP-096: <span class="status">Under Monitoring</span></div>
+</section>
+
+<script>
+    const scpStatusElements = document.querySelectorAll('.scp-status .status');
+    const statuses = ['Contained', 'Breach', 'Under Monitoring'];
+
+    function updateStatus() {
+        scpStatusElements.forEach(status => {
+            const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+            status.textContent = randomStatus;
+            status.style.color = randomStatus === 'Breach' ? 'red' :
+                randomStatus === 'Contained' ? 'green' : 'grey';
+        });
+    }
+
+    setInterval(updateStatus, 10000); // Updates every 10 seconds
+</script>
+</body>
+</html>
