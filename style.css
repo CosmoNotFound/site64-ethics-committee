@@ -24,11 +24,19 @@ body {
 }
 .logo {
     max-width: 150px;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover {
-    transform: rotate(360deg) translateX(20px);  /* Rotate and move on hover */
+    animation: swingLogo 0.8s ease-in-out infinite;  /* Subtle swing left and right */
+}
+
+@keyframes swingLogo {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0); }
 }
 
 /* HEADER SETTINGS */
@@ -66,6 +74,7 @@ header h1 {
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 10px 20px;
     border-radius: 5px;
+    border: 2px solid transparent; /* Border highlight when active */
 }
 
 .nav-menu li a:hover, .nav-menu li a:focus {
@@ -74,8 +83,13 @@ header h1 {
     outline: none;
 }
 
+.nav-menu li a.active {
+    background-color: #00b894;
+    border-color: #ffffff; /* Highlight the active button */
+}
+
 .nav-menu li a:visited {
-    color: #ffffff;  /* Stay white when visited */
+    color: #ffffff;
 }
 
 /* HERO SECTION */
