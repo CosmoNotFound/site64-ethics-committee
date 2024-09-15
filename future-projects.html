@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
         <div id="logo">
-            <img src="Site-64-Ethics-Committee-Logo.png" alt="Site-64 Ethics Committee">
+            <img src="Site-64-Ethics-Committee-Logo.png" alt="Site-64 Ethics Committee Logo">
         </div>
         <nav>
             <a href="index.html">Home</a>
@@ -21,9 +23,40 @@
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Future Projects of the Ethics Committee</h1>
-        <p>Upcoming plans and future goals for the Site-64 Ethics Committee.</p>
+    <!-- Main Content Section -->
+    <section id="main-content">
+        <h2>Upcoming Projects</h2>
+        <p>Details about upcoming projects and future initiatives will go here.</p>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Site-64 Ethics Committee</p>
+    </footer>
+
+    <!-- Ambient Music -->
+    <audio id="ambient-sound" src="Ajoura - The SCP Foundation Main Theme.mp3" loop></audio>
+    <button id="music-toggle" onclick="toggleMusic()">Mute Music</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var ambientSound = document.getElementById('ambient-sound');
+            ambientSound.volume = 0.2;
+            ambientSound.play();
+        });
+
+        function toggleMusic() {
+            var ambientSound = document.getElementById('ambient-sound');
+            var toggleButton = document.getElementById('music-toggle');
+            if (ambientSound.paused) {
+                ambientSound.play();
+                toggleButton.textContent = "Mute Music";
+            } else {
+                ambientSound.pause();
+                toggleButton.textContent = "Unmute Music";
+            }
+        }
+    </script>
+
 </body>
 </html>
