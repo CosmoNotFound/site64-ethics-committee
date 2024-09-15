@@ -8,10 +8,10 @@
 /* BODY SETTINGS */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f4f8;  /* Light background for improved readability */
-    color: #333;                /* Dark grey text */
+    background-color: #f0f4f8;
+    color: #333;
     line-height: 1.6;
-    overflow-x: hidden;         /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
 /* LOGO SETTINGS */
@@ -24,24 +24,24 @@ body {
 }
 .logo {
     max-width: 150px;
-    transition: transform 0.5s ease, translate 0.7s ease;
+    transition: transform 1s ease-in-out;
 }
 
 .logo:hover {
-    transform: rotate(360deg) translateX(50px) translateY(30px);  /* Random movement on hover */
+    transform: rotate(360deg) translateX(20px);  /* Rotate and move on hover */
 }
 
 /* HEADER SETTINGS */
 header {
-    background-color: #2d3436;   /* Dark grey background */
+    background-color: #2d3436;
     padding: 20px 0;
     text-align: center;
     border-bottom: 3px solid #00b894;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    color: #ffffff;             /* White text */
+    color: #ffffff;
     font-size: 2.5em;
     margin: 10px 0;
     text-transform: uppercase;
@@ -59,30 +59,38 @@ header h1 {
     margin: 0 20px;
 }
 
-.nav-menu li a:link, .nav-menu li a:visited {
-    color: #ffffff;  /* Keep the links white, even when clicked */
+.nav-menu li a {
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.nav-menu li a:hover {
-    color: #00b894;  /* Green hover effect */
+.nav-menu li a:hover, .nav-menu li a:focus {
+    color: #ffffff;
+    background-color: #00b894;
+    outline: none;
+}
+
+.nav-menu li a:visited {
+    color: #ffffff;  /* Stay white when visited */
 }
 
 /* HERO SECTION */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #00b894, #00cec9); /* Green gradient */
-    color: #ffffff;  /* White text */
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    color: #ffffff;
 }
 
 .hero h2 {
     font-size: 2.8em;
     margin-bottom: 15px;
     font-weight: 600;
-    animation: slideIn 1s ease-out;  /* Slide-in animation */
+    animation: slideIn 1s ease-out;
 }
 
 .hero p {
@@ -95,7 +103,7 @@ header h1 {
 /* QUOTE SECTION */
 .quote-container {
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.2); /* Transparent background for quotes */
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 10px;
     font-style: italic;
@@ -138,7 +146,7 @@ blockquote.quote {
 }
 
 .feature:hover {
-    transform: translateY(-10px);  /* Hover effect on features */
+    transform: translateY(-10px);
 }
 
 .feature h3 {
@@ -161,7 +169,7 @@ blockquote.quote {
 
 .leadership-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Display leadership images in a grid */
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     padding: 20px;
 }
@@ -169,12 +177,12 @@ blockquote.quote {
 .leadership-grid img {
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* BUTTON STYLING */
 .btn {
-    background-color: #00cec9;   /* Teal button */
+    background-color: #00cec9;
     color: #ffffff;
     padding: 12px 30px;
     font-size: 1.1em;
@@ -187,12 +195,12 @@ blockquote.quote {
 }
 
 .btn:hover {
-    background-color: #0984e3;   /* Blue hover effect */
+    background-color: #0984e3;
 }
 
 /* FOOTER */
 footer {
-    background-color: #2d3436;   /* Dark grey background */
+    background-color: #2d3436;
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -242,7 +250,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES (MOBILE FRIENDLY) */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8em;
@@ -258,7 +266,7 @@ footer {
         padding: 10px 25px;
     }
     .leadership-grid {
-        grid-template-columns: 1fr 1fr; /* Adjust leadership grid for mobile */
+        grid-template-columns: 1fr 1fr;
     }
     .feature-grid {
         flex-direction: column;
