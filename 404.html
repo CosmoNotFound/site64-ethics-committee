@@ -7,32 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="error-404">
-        <h1>ERROR 404: Document Not Found</h1>
-        <p>You have accessed unauthorized documents.</p>
+    <div class="error-404 glitch">
+        <h1>ERROR 404: Unauthorized Access</h1>
+        <p>You are attempting to access unauthorized SCP files. Your actions have been logged and reported.</p>
         <p><strong>Alert:</strong> Security personnel have been notified. Termination or disciplinary action is imminent.</p>
     </div>
 
     <script>
         document.querySelector('h1').classList.add('glitch');
+        document.querySelector('p').classList.add('glitch');
     </script>
 </body>
 </html>
 
 <style>
+    /* General 404 Page Styling */
     .error-404 {
         background-color: black;
         color: red;
         font-family: 'Courier New', Courier, monospace;
         text-align: center;
         padding: 50px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    /* Enhanced Glitch Effect */
     .glitch {
-        animation: glitch 1s infinite;
+        animation: glitch 1.5s infinite;
     }
+
     @keyframes glitch {
-        0% { text-shadow: 2px 2px 1px red; }
-        50% { text-shadow: -2px -2px 2px green; }
-        100% { text-shadow: 2px 2px 1px red; }
+        0% { text-shadow: 3px 3px 1px red; }
+        25% { text-shadow: -3px -3px 2px green; }
+        50% { text-shadow: 3px 3px 1px red; }
+        75% { text-shadow: -3px -3px 2px green; }
+        100% { text-shadow: 3px 3px 1px red; }
+    }
+
+    /* Specific Glitch for the H1 */
+    h1.glitch {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    /* Specific Glitch for the Paragraphs */
+    p.glitch {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    /* Additional Red Highlighting for the Warning */
+    p strong {
+        color: #ff4d4d;
     }
 </style>
