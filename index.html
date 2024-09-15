@@ -7,84 +7,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="Site-64-Ethics-Committee-Logo.png" alt="Site-64 Ethics Committee Logo" class="logo" id="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="future-projects.html">Future Projects</a></li>
-                <li><a href="leadership.html">Leadership</a></li>
-                <li><a href="about-me.html">About Me</a></li>
-                <li><a href="current-manpower.html">Current Manpower</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Welcome to the Site-64 Ethics Committee</h1>
-        <p>We oversee projects with the highest ethical standards, ensuring responsibility and integrity in every step.</p>
-        <blockquote>"Dura Lex, Sed Lex" - The law is hard but it is the law</blockquote>
-        <a href="#containment-dashboard" class="button">Learn More</a>
-    </section>
+<header>
+    <img src="Site-64-Ethics-Committee-Logo.png" alt="Site-64 Ethics Committee Logo" class="logo" id="logo">
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="future-projects.html">Future Projects</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li><a href="current-manpower.html">Current Manpower</a></li>
+            <li><a href="dashboard.html">Containment Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section class="containment-dashboard" id="containment-dashboard">
-        <h2>SCP Containment Dashboard</h2>
-        <div class="scp-status" id="scp-173">SCP-173: <span class="status">Contained</span></div>
-        <div class="scp-status" id="scp-682">SCP-682: <span class="status">Breach</span></div>
-        <div class="scp-status" id="scp-096">SCP-096: <span class="status">Under Monitoring</span></div>
-    </section>
+<section class="hero">
+    <h1>Welcome to the Site-64 Ethics Committee</h1>
+    <p>We oversee projects with the highest ethical standards, ensuring responsibility and integrity in every step.</p>
+    <p class="quote">"Dura Lex, Sed Lex" - The law is hard but it is the law</p>
+    <button class="btn" id="learnMore">LEARN MORE</button>
+</section>
 
-    <section class="leadership">
-        <h2>Our Leadership</h2>
-        <div class="leadership-gallery">
-            <img src="pic1.jpg" alt="Leadership 1">
-            <img src="pic2.jpg" alt="Leadership 2">
-            <img src="pic3.jpg" alt="Leadership 3">
-            <img src="pic4.jpg" alt="Leadership 4">
-            <img src="pic5.jpg" alt="Leadership 5">
-        </div>
-    </section>
+<section class="leadership">
+    <h2>Our Leadership</h2>
+    <div class="gallery">
+        <img src="pic1.jpg" alt="Leadership 1">
+        <img src="pic2.jpg" alt="Leadership 2">
+        <img src="pic3.jpg" alt="Leadership 3">
+        <img src="pic4.jpg" alt="Leadership 4">
+        <img src="pic5.jpg" alt="Leadership 5">
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Site-64 Ethics Committee</p>
-    </footer>
+<!-- Pop-up Modal -->
+<div id="incidentModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Incident Report - SCP-173</h2>
+        <p>[DATA EXPUNGED]</p>
+    </div>
+</div>
 
-    <audio id="background-audio" autoplay loop>
-        <source src="last warning.mp3" type="audio/mpeg">
-        <source src="Ajoura - The SCP Foundation Main Theme.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio id="ambientSound" loop>
+    <source src="last-warning.mp3" type="audio/mpeg">
+    <source src="Ajoura-The-SCP-Foundation-Main-Theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
-    <script>
-        // Logo hover animation (move left and right)
-        const logo = document.getElementById('logo');
-        logo.onmouseover = function() {
-            this.style.transform = 'rotate(10deg)';
+<script>
+    const logo = document.getElementById("logo");
+    const ambientSound = document.getElementById("ambientSound");
+    ambientSound.volume = 0.2; // Set volume to a low level
+    ambientSound.play();
+
+    // Spin logo animation on hover
+    logo.addEventListener('mouseenter', () => {
+        logo.classList.add('spin');
+    });
+    logo.addEventListener('mouseleave', () => {
+        logo.classList.remove('spin');
+    });
+
+    // Modal functionality
+    const modal = document.getElementById("incidentModal");
+    const btn = document.getElementById("learnMore");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
-        logo.onmouseout = function() {
-            this.style.transform = 'rotate(-10deg)';
-        }
+    }
+</script>
 
-        // Containment dashboard random status updates
-        const scpStatusElements = document.querySelectorAll('.scp-status .status');
-        const statuses = ['Contained', 'Breach', 'Under Monitoring'];
-
-        function updateStatus() {
-            scpStatusElements.forEach(status => {
-                const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
-                status.textContent = randomStatus;
-                status.style.color = randomStatus === 'Breach' ? 'red' :
-                                     randomStatus === 'Contained' ? 'green' : 'grey';
-            });
-        }
-        setInterval(updateStatus, 10000); // Updates every 10 seconds
-
-        // Set audio volume to low
-        const audio = document.getElementById('background-audio');
-        audio.volume = 0.1;
-    </script>
 </body>
 </html>
