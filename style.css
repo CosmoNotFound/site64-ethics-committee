@@ -8,7 +8,7 @@
 /* BODY SETTINGS */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f4f8;
+    background-color: #f4f4f4;  /* Light grey background */
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
@@ -41,7 +41,7 @@ body {
 
 /* HEADER SETTINGS */
 header {
-    background-color: #2d3436;
+    background-color: #4a4a4a;  /* Dark grey */
     padding: 20px 0;
     text-align: center;
     border-bottom: 3px solid #00b894;
@@ -95,7 +95,7 @@ header h1 {
 .hero {
     text-align: center;
     padding: 50px 0;
-    background-color: #00b894;
+    background-color: #333;  /* Slightly darker grey */
     color: #ffffff;
 }
 
@@ -134,7 +134,7 @@ header h1 {
 .leadership {
     text-align: center;
     padding: 50px 0;
-    background-color: #2d3436;
+    background-color: #4a4a4a;
 }
 
 .leadership h2 {
@@ -169,7 +169,7 @@ header h1 {
 
 /* FOOTER */
 footer {
-    background-color: #2d3436;
+    background-color: #4a4a4a;
     color: #ffffff;
     text-align: center;
     padding: 20px;
