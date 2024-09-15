@@ -54,7 +54,6 @@ header h1 {
     margin: 10px 0;
     text-transform: uppercase;
     letter-spacing: 3px;
-    animation: fadeIn 1.2s ease-in-out;
 }
 
 .nav-menu {
@@ -109,17 +108,39 @@ header h1 {
     font-size: 1.2em;
 }
 
+.quote {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #00b894;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #00b894;
+    color: #ffffff;
+}
+
 /* LEADERSHIP SECTION */
 .leadership {
     text-align: center;
     padding: 50px 0;
-    background-color: #f0f4f8;
+    background-color: #2d3436;
 }
 
 .leadership h2 {
     font-size: 2.5em;
     margin-bottom: 30px;
-    color: #2d3436;
+    color: #ffffff;
 }
 
 .leadership-grid {
@@ -135,21 +156,15 @@ header h1 {
 }
 
 .leadership-item img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .leadership-item img:hover {
-    transform: scale(1.1);
-}
-
-.leadership-item h3 {
-    margin-top: 15px;
-    color: #2d3436;
-    font-size: 1.2em;
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -159,7 +174,4 @@ footer {
     text-align: center;
     padding: 20px;
     border-top: 3px solid #00b894;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
