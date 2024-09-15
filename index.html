@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site-64 Ethics Committee</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
+        <div id="logo">
+            <img src="Site-64-Ethics-Committee-Logo.png" alt="Site-64 Ethics Committee Logo">
+        </div>
         <nav>
             <a href="index.html" class="active">Home</a>
             <a href="history.html">History</a>
@@ -17,18 +21,17 @@
             <a href="about-me.html">About Me</a>
             <a href="current-manpower.html">Current Manpower</a>
         </nav>
-        <div id="logo">
-            <img src="Site-64-Ethics-Committee-Logo.png" alt="Site-64 Ethics Committee Logo">
-        </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
         <h1>Welcome to the Site-64 Ethics Committee</h1>
         <p>We oversee projects with the highest ethical standards, ensuring responsibility and integrity in every step.</p>
-        <blockquote>"Dura Lex, Sed Lex" - The law is hard but it is the law</blockquote>
-        <a href="future-projects.html" class="learn-more-btn">LEARN MORE</a>
+        <p><em>"Dura Lex, Sed Lex" - The law is hard but it is the law</em></p>
+        <a href="future-projects.html" class="learn-more-btn">Learn More</a>
     </section>
 
+    <!-- Leadership Section -->
     <section id="leadership-gallery">
         <h2>Our Leadership</h2>
         <div class="leadership">
@@ -40,26 +43,34 @@
         </div>
     </section>
 
-    <section id="scp-dashboard">
-        <h2>SCP Containment Dashboard</h2>
-        <div class="scp-item">
-            <h3>SCP-682</h3>
-            <div class="status-box breach">Breached</div>
-        </div>
-        <div class="scp-item">
-            <h3>SCP-096</h3>
-            <div class="status-box monitoring">Under Monitoring</div>
-        </div>
-        <div class="scp-item">
-            <h3>SCP-173</h3>
-            <div class="status-box potential-breach">Potential Breach</div>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Site-64 Ethics Committee</p>
+    </footer>
 
-    <audio id="ambient-sound" loop>
-        <source src="last_warning.mp3" type="audio/mpeg">
-        <source src="Ajoura - The SCP Foundation Main Theme.mp3" type="audio/mpeg">
-    </audio>
+    <!-- Ambient Music -->
+    <audio id="ambient-sound" src="Ajoura - The SCP Foundation Main Theme.mp3" loop></audio>
+    <button id="music-toggle" onclick="toggleMusic()">Mute Music</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var ambientSound = document.getElementById('ambient-sound');
+            ambientSound.volume = 0.2;
+            ambientSound.play();
+        });
+
+        function toggleMusic() {
+            var ambientSound = document.getElementById('ambient-sound');
+            var toggleButton = document.getElementById('music-toggle');
+            if (ambientSound.paused) {
+                ambientSound.play();
+                toggleButton.textContent = "Mute Music";
+            } else {
+                ambientSound.pause();
+                toggleButton.textContent = "Unmute Music";
+            }
+        }
+    </script>
 
 </body>
 </html>
