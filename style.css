@@ -109,6 +109,49 @@ header h1 {
     font-size: 1.2em;
 }
 
+/* LEADERSHIP SECTION */
+.leadership {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f0f4f8;
+}
+
+.leadership h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2d3436;
+}
+
+.leadership-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.leadership-item {
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.leadership-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.leadership-item img:hover {
+    transform: scale(1.1);
+}
+
+.leadership-item h3 {
+    margin-top: 15px;
+    color: #2d3436;
+    font-size: 1.2em;
+}
+
 /* FOOTER */
 footer {
     background-color: #2d3436;
