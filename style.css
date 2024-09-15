@@ -74,7 +74,7 @@ header h1 {
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 10px 20px;
     border-radius: 5px;
-    border: 2px solid transparent; /* Border highlight when active */
+    border: 2px solid transparent;
 }
 
 .nav-menu li a:hover, .nav-menu li a:focus {
@@ -85,95 +85,38 @@ header h1 {
 
 .nav-menu li a.active {
     background-color: #00b894;
-    border-color: #ffffff; /* Highlight the active button */
+    border-color: #ffffff;
 }
 
 .nav-menu li a:visited {
-    color: #ffffff;  /* Ensure the button remains white */
+    color: #ffffff;
 }
 
-/* PAGE CONTENT */
-.page-content {
-    padding: 60px 20px;
+/* HERO SECTION */
+.hero {
     text-align: center;
+    padding: 50px 0;
+    background-color: #00b894;
+    color: #ffffff;
 }
 
-.page-content h2 {
-    font-size: 2.5em;
+.hero h2 {
+    font-size: 3em;
     margin-bottom: 20px;
-    color: #2d3436;
 }
 
-.page-content p {
+.hero p {
     font-size: 1.2em;
-    color: #555;
 }
 
 /* FOOTER */
 footer {
     background-color: #2d3436;
     color: #ffffff;
+    text-align: center;
     padding: 20px;
-    text-align: center;
-    border-top: 3px solid #00cec9;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left, .footer-right {
-    flex: 1;
-    text-align: center;
-}
-
-.footer-left p {
-    font-weight: 400;
-    margin: 0;
-}
-
-.footer-right p a {
-    color: #00cec9;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-    .page-content h2 {
-        font-size: 2em;
-    }
-    .nav-menu li {
-        display: block;
-        margin: 10px 0;
-    }
-    .btn {
-        padding: 10px 25px;
-    }
+    border-top: 3px solid #00b894;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
