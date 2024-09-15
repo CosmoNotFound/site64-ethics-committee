@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Unauthorized Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="error-404">
+        <h1>ERROR 404: Document Not Found</h1>
+        <p>You have accessed unauthorized documents.</p>
+        <p><strong>Alert:</strong> Security personnel have been notified. Termination or disciplinary action is imminent.</p>
+    </div>
+
+    <script>
+        document.querySelector('h1').classList.add('glitch');
+    </script>
+</body>
+</html>
+
+<style>
+    .error-404 {
+        background-color: black;
+        color: red;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        padding: 50px;
+    }
+    .glitch {
+        animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+        0% { text-shadow: 2px 2px 1px red; }
+        50% { text-shadow: -2px -2px 2px green; }
+        100% { text-shadow: 2px 2px 1px red; }
+    }
+</style>
