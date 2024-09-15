@@ -31,15 +31,29 @@
         <a href="future-projects.html" class="learn-more-btn">Learn More</a>
     </section>
 
-    <!-- Leadership Section -->
+    <!-- Our Leadership Section -->
     <section id="leadership-gallery">
         <h2>Our Leadership</h2>
         <div class="leadership">
-            <img src="pic1.jpg" alt="Leadership 1">
-            <img src="pic2.jpg" alt="Leadership 2">
-            <img src="pic3.jpg" alt="Leadership 3">
-            <img src="pic4.jpg" alt="Leadership 4">
-            <img src="pic5.jpg" alt="Leadership 5">
+            <img src="pic1.png" alt="Leadership 1">
+            <img src="pic2.png" alt="Leadership 2">
+            <img src="pic3.png" alt="Leadership 3">
+            <img src="pic4.png" alt="Leadership 4">
+            <img src="pic5.png" alt="Leadership 5">
+        </div>
+    </section>
+
+    <!-- SCP Containment Dashboard Section -->
+    <section id="scp-dashboard">
+        <h2>SCP Containment Dashboard</h2>
+        <div class="scp-item">
+            <p>SCP-173: <span class="status-box breach">Breach</span></p>
+        </div>
+        <div class="scp-item">
+            <p>SCP-096: <span class="status-box monitoring">Under Monitoring</span></p>
+        </div>
+        <div class="scp-item">
+            <p>SCP-682: <span class="status-box potential-breach">Potential Breach</span></p>
         </div>
     </section>
 
@@ -55,7 +69,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var ambientSound = document.getElementById('ambient-sound');
-            ambientSound.volume = 0.2;
+            ambientSound.volume = 0.5;  // Increased volume
             ambientSound.play();
         });
 
