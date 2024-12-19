@@ -20,26 +20,5 @@
             <a href="current-manpower.html">Current Manpower</a>
         </nav>
     </header>
-
-    <section id="scp-dashboard">
-        <h2>SCP Containment Dashboard</h2>
-        <div class="scp-item">
-            SCP-173: <span class="status-box breach">Breached</span>
-        </div>
-        <div class="scp-item">
-            SCP-682: <span class="status-box potential-breach">Potential Breach</span>
-        </div>
-        <div class="scp-item">
-            SCP-096: <span class="status-box monitoring">Under Monitoring</span>
-        </div>
-    </section>
-
-    <script>
-        const statuses = ["breach", "monitoring", "potential-breach"];
-        document.querySelectorAll('.status-box').forEach(box => {
-            const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
-            box.className = 'status-box ' + randomStatus;
-        });
-    </script>
 </body>
 </html>
